@@ -1,0 +1,172 @@
+<!--------------------------------------------------------------------------
+* Autor: German Mendoza
+* correo: german.mendoza.187@gmail.com
+* Fecha de publicación: 30/07/2015
+* Version: 1.0
+* Copyright: German Mendoza, en caso de distribución colocar mis referencias
+* Descripcion: Página que contiene el html general
+*
+*-------------------------------------------------------------------------->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+        "http://www.w3.org/TR/html4/strict.dtd">
+<!--[if IE 8]>
+<html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]>
+<html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="es" ng-app="proyectoEscuela"> <!--<![endif]-->
+<head>
+    <base href="/">
+    <title>Proyecto Escuela</title>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+          content="pagina divulgativa sobre como detectar si las escuelas venezolanas están protegidas contra los terremotos">
+    <meta name="author" content="German Mendoza">
+    <meta name="keywords" content="Funvisis, Sismos, Escuela Seguras, Terremotos">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,300italic,400italic' rel='stylesheet'
+          type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Theme CSS -->
+    <link id="theme-style" rel="stylesheet" href="css/styles.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+
+<!-- ******HEADER****** -->
+<header id="header">
+    <div class="container">
+        <div class="row">
+            <img src="images/cintilloFvis.png" alt="cintillo funvisis" width="100%" style="padding-bottom: 20px">
+        </div>
+        <div class="row">
+            <div class="col-md-3 imgLogo">
+                <img src="images/funvisisLogo.png" alt="Logo Funvisis">
+            </div>
+            <div class="col-md-5">
+                <h1 id="firts-title">ESCUELAS</h1>
+
+                <h1 id="second-title">SEGURAS</h1>
+
+                <h2>ANTE LOS TERREMOTOS</h2>
+            </div>
+            <div class="col-md-4 img">
+                <img src="images/header.png" alt="Escuela Preescolar">
+            </div>
+        </div>
+    </div>
+</header>
+<!--//header-->
+
+<!-- ******NAV****** -->
+<div class="container-fluid">
+    <nav id="bs-navbar" class="main-nav" ng-controller="NavCtrl">
+        <div class="navbar-header">
+            <button class="navbar-toggle" type="button" ng-click="isCollapsed = !isCollapsed">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <!--//nav-toggle-->
+        </div>
+        <div class="navbar-collapse collapse" collapse="isCollapsed">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a ui-sref="home">INICIO</a>
+                </li>
+                <li>
+                    <a href="">ACTIVIDADES</a>
+                </li>
+                <li>
+                    <a ui-sref="contact">CONTACTO</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>
+<!--//nav-->
+
+<div ui-view>
+
+</div>
+
+
+<!-- ******FOOTER****** -->
+<footer class="footer">
+    <!--<p>Proyecto para la difusión de información sobre vulnerabilidad física escolar del País.</p>
+    <p>CONVENIO DE COFINANCIAMIENTO ENTRE CIGIR Y TOTAL OIL.</p>
+    <br>
+    <P>proyectoescuelas.ve@gmail.com</P>
+    <p>CARACAS. VENEZUELA</p>-->
+
+    <h2>ENLACÉS DE INTERÉS</h2>
+
+    <ul id="interest-link">
+        <li>
+            <a href="http://www.cigir.org/" target="_blank">
+                Centro de Investigación en Gestión Integral de Riesgos
+                <div class="interest-img">
+                    <img src="images/lg-cigir.png" alt="CIGIR">
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="http://www.funvisis.gob.ve/" target="_blank">
+                Fundación Venezolana de Investigaciones Sismológicas
+                <div class="interest-img">
+                    <img src="images/lg-funvisis.png" alt="FUNVISIS">
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="http://www.fede.gob.ve/web/" target="_blank">
+                Fundación de Edificaciones y Dotaciones Educativas
+                <div class="interest-img">
+                    <img src="images/lg-fede.png" width="160" alt="FEDE">
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="http://www.ing.ucv.ve/imme/" target="_blank">
+                Instituto de Materiales y Modelos Estructurales
+                <div class="interest-img">
+                    <img src="images/lg-imme-ucv-ing.png" width="150" alt="IMME">
+                </div>
+            </a>
+        </li>
+    </ul>
+
+    <div class="container text-center">
+        <small class="copyright">Creado <i class="fa fa-heart"></i> por <a href="https://ve.linkedin.com/in/german0296"
+                                                                           target="_blank">German Mendoza</a></small>
+    </div>
+    <!--//container-->
+</footer>
+<!--//footer-->
+
+<!-- Javascript -->
+<script type="text/javascript" src="vendor/angular.js"></script>
+<script type="text/javascript" src="vendor/angular-ui-router.js"></script>
+<script type="text/javascript" src="vendor/angular-scroll.js"></script>
+<script type="text/javascript" src="vendor/angular-ui-bootstrap.js"></script>
+<script type="text/javascript" src="app.js"></script>
+<script src="controllers/nav.js"></script>
+<!--
+<script type="text/javascript" src="assets/vendor/js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="assets/vendor/js/sammy.js"></script>
+<script type="text/javascript" src="assets/js/main.js"></script>  -->
+</body>
+</html> 
+
